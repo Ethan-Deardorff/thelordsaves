@@ -44,6 +44,7 @@
 }
 
 html {
+  overflow-x: hidden;
   will-change: background-color, color;
   background-color: var(--colors-background);
   height: 100%;
@@ -63,7 +64,12 @@ html {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
+  overflow-x: hidden;
   height: fit-content;
   padding-bottom: 56px;
   overflow-y: visible;
