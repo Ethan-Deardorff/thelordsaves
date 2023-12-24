@@ -7,8 +7,9 @@
   --colors-blue: #1947BE;
   --gradients-blue: linear-gradient(90deg, #1947BE 0%, #1947BE 100%);
   --font-size-body: 1rem;
-  --font-size-title: 1.5rem;
+  --font-size-subhead: 1.5rem;
   --font-size-header: 2rem;
+  --font-size-title: 3rem;
 }
 
 * {
@@ -87,16 +88,19 @@ a {
 h1 {
   font-size: var(--font-size-header);
   color: var(--colors-text);
+  line-height: 1.3em;
 }
 
 h2 {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-subhead);
   color: var(--colors-text);
+  line-height: 1.3em;
 }
 
 p {
+  font-size: var(--font-size-body);
   color: var(--colors-text);
-  line-height: 1.5rem;
+  line-height: 1.5em;
 }
 
 hr {
@@ -139,7 +143,7 @@ iframe.video {
   width: 100%;
 }
 
-w-70 {
+.w-70 {
   width: 70%;
 }
 
@@ -468,7 +472,7 @@ aside {
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: var(--font-size-title);
   font-weight: bold;
   color: var(--colors-text);
 }
@@ -560,15 +564,7 @@ aside {
 }
 
 /************************** Screen Sizes **************************/
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: 18px;
-  }
-
-  p {
-    line-height: 27px;
-  }
-}
+@media screen and (min-width: 1440px) {}
 
 @media screen and (max-width: 1024px) {
   #about-info {
@@ -583,10 +579,8 @@ aside {
 
 @media screen and (max-width: 768px) {
 
-  :root {
-    --font-size-body: 0.875rem;
-    --font-size-title: 1.125rem;
-    --font-size-header: 1.5rem;
+  html {
+    font-size: 14px;
   }
 
   #large-nav {
