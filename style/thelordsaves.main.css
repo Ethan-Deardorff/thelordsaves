@@ -716,4 +716,17 @@ aside {
   .bible-ex {
     width: 100%;
   }
+
+  #contact-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-text {
+    width: 100%;
+  }
+
+  .contact-fig {
+    width: 100%;
+  }
 }
