@@ -579,6 +579,10 @@ aside {
 
 @media screen and (max-width: 768px) {
 
+  .l-gap {
+    gap: 16px;
+  }
+
   #large-nav {
     display: none;
   }
@@ -710,6 +714,12 @@ aside {
   #contact-section {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 48px;
+
+    &>div {
+      gap: 32px;
+      flex-direction: column;
+    }
   }
 
   .contact-text {
