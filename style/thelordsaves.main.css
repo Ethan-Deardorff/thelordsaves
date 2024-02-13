@@ -361,7 +361,7 @@ header.overlay-active~#overlay-bg {
 #nav-overlay {
   position: absolute;
   top: 56px;
-  gap: 120px;
+  gap: 10vw;
   height: fit-content;
   padding: 16px 56px 56px;
   background-color: var(--colors-background);
@@ -389,6 +389,7 @@ nav.small-nav {
 .nav-item {
   display: flex;
   align-items: center;
+  width: max-content;
   gap: 8px;
 }
 
@@ -595,7 +596,7 @@ aside {
 
   header.small-overlay-active {
     background-color: var(--colors-background);
-    height: 525px;
+    height: 555px;
     border: none;
   }
 
@@ -715,6 +716,7 @@ aside {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 48px;
+    gap: 32px;
 
     &>div {
       gap: 32px;
