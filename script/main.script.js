@@ -30,7 +30,7 @@ function loadDarkModePreference() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   mediaQueryObj = window.matchMedia('(prefers-color-scheme: dark)');
 
   mediaQueryObj.addEventListener('change', handleDarkModeChange);
@@ -50,14 +50,21 @@ const thirdBar = document.querySelector('#bar-3');
 
 largeNav.addEventListener('mouseover', () => {
   header.classList.add('overlay-active');
+  header.style.height = header.scrollHeight + 'px';
 });
 
 largeNav.addEventListener('mouseout', () => {
   header.classList.remove('overlay-active');
+  header.style.height = '56px';
 });
 
 smallNav.addEventListener('click', () => {
   header.classList.toggle('small-overlay-active');
+  if (header.classList.contains('small-overlay-active')) {
+    header.style.height = header.scrollHeight + 'px';
+  } else {
+    header.style.height = '56px';
+  }
   firstBar.classList.toggle('bar-hide');
   thirdBar.classList.toggle('bar-hide');
 });
@@ -70,17 +77,17 @@ navBg.addEventListener('click', () => {
 
 navOverlay.addEventListener('mouseover', () => {
   header.classList.add('overlay-active');
+  header.style.height = header.scrollHeight + 'px';
 });
 
 navOverlay.addEventListener('mouseout', () => {
   header.classList.remove('overlay-active');
+  header.style.height = '56px';
 });
 
 //Reduced Motion
 const marquee = document.querySelectorAll('.verse-marquee');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduced)').matches;
-
-console.log('prefersReducedMotion:', prefersReducedMotion);
 
 if (!prefersReducedMotion) {
   addAnimation();
@@ -112,7 +119,7 @@ function addAnimation() {
 }
 
 // Reference Elements
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   function toggleRef() {
     var middleOfScreenY = window.innerHeight / 2 + window.scrollY;
 
@@ -128,11 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var purposeRef = document.getElementById('purpose-ref');
     var acceptanceRef = document.getElementById('acceptance-ref');
     var valuesRef = document.getElementById('values-ref');
-
-    console.log('purposeTop:', purposeTop);
-    console.log('acceptanceTop:', acceptanceTop);
-    console.log('valuesTop:', valuesTop);
-    console.log(middleOfScreenY)
 
     if (middleOfScreenY >= purpose.offsetTop && middleOfScreenY < acceptance.offsetTop) {
       purposeRef.classList.add('active');

@@ -349,7 +349,6 @@ header {
 
 header.overlay-active {
   background-color: var(--colors-background);
-  height: 267px;
   border: 0px solid transparent;
 }
 
