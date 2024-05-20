@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Header Overlay
 const header = document.querySelector('header');
+const headerItems = document.querySelectorAll('.nav-item');
 const largeNav = document.querySelector('#large-nav')
 const navOverlay = document.querySelector('#nav-overlay');
 const navBg = document.querySelector('#overlay-bg');
@@ -47,6 +48,16 @@ const navBg = document.querySelector('#overlay-bg');
 const smallNav = document.querySelector('.small-nav');
 const firstBar = document.querySelector('#bar-1');
 const thirdBar = document.querySelector('#bar-3');
+
+headerItems.forEach(item => {
+  item.addEventListener('click', () => {
+    header.classList.remove('overlay-active');
+    header.classList.remove('small-overlay-active');
+    firstBar.classList.toggle('bar-hide');
+    thirdBar.classList.toggle('bar-hide');
+    header.style.height = '56px';
+  });
+});
 
 largeNav.addEventListener('mouseover', () => {
   header.classList.add('overlay-active');
