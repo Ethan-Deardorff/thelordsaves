@@ -71,6 +71,7 @@ smallNav.addEventListener('click', () => {
 
 navBg.addEventListener('click', () => {
   header.classList.remove('small-overlay-active');
+  header.style.height = '56px';
   firstBar.classList.toggle('bar-hide');
   thirdBar.classList.toggle('bar-hide');
 });
