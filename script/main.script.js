@@ -136,41 +136,77 @@ document.addEventListener('DOMContentLoaded', function () {
     var middleOfScreenY = window.innerHeight / 2 + window.scrollY;
 
     var purpose = document.getElementById('purpose');
-    var purposeTop = purpose.offsetTop;
-
     var acceptance = document.getElementById('acceptance');
-    var acceptanceTop = acceptance.offsetTop;
-
     var values = document.getElementById('values');
-    var valuesTop = values.offsetTop;
 
     var purposeRef = document.getElementById('purpose-ref');
     var acceptanceRef = document.getElementById('acceptance-ref');
     var valuesRef = document.getElementById('values-ref');
 
-    if (middleOfScreenY >= purpose.offsetTop && middleOfScreenY < acceptance.offsetTop) {
-      purposeRef.classList.add('active');
-      acceptanceRef.classList.remove('active');
-      valuesRef.classList.remove('active');
-    } else if (middleOfScreenY >= acceptance.offsetTop && middleOfScreenY < values.offsetTop) {
-      acceptanceRef.classList.add('active');
-      purposeRef.classList.remove('active');
-      valuesRef.classList.remove('active');
-    } else if (middleOfScreenY >= values.offsetTop) {
-      valuesRef.classList.add('active');
-      purposeRef.classList.remove('active');
-      acceptanceRef.classList.remove('active');
-    } else {
-      // No section is in the middle of the screen
-      purposeRef.classList.remove('active');
-      acceptanceRef.classList.remove('active');
-      valuesRef.classList.remove('active');
+    if (purpose && acceptance && values) {
+      if (middleOfScreenY >= purpose.offsetTop && middleOfScreenY < acceptance.offsetTop) {
+        purposeRef.classList.add('active');
+        acceptanceRef.classList.remove('active');
+        valuesRef.classList.remove('active');
+      } else if (middleOfScreenY >= acceptance.offsetTop && middleOfScreenY < values.offsetTop) {
+        acceptanceRef.classList.add('active');
+        purposeRef.classList.remove('active');
+        valuesRef.classList.remove('active');
+      } else if (middleOfScreenY >= values.offsetTop) {
+        valuesRef.classList.add('active');
+        purposeRef.classList.remove('active');
+        acceptanceRef.classList.remove('active');
+      } else {
+        // No section is in the middle of the screen
+        purposeRef.classList.remove('active');
+        acceptanceRef.classList.remove('active');
+        valuesRef.classList.remove('active');
+      }
     }
-
-
   }
 
   window.addEventListener('scroll', toggleRef);
 
   toggleRef();
 });
+
+// Questions and Answers
+const questions = document.querySelectorAll('.question-container');
+const questionDropdown = document.querySelectorAll('.question-dropdown');
+
+function setQuestionHeight() {
+  if (questions) {
+    questions.forEach((question) => {
+      question.style.setProperty('--header-height', question.firstElementChild.offsetHeight + 'px');
+      question.style.setProperty('--full-height', question.scrollHeight + 'px');
+    });
+  }
+}
+
+setQuestionHeight();
+window.addEventListener('resize', () => {
+  questions.forEach((question) => {
+    question.style.setProperty('--full-height', 'max-content');
+  });
+  setInterval(setQuestionHeight, 500);
+});
+
+if (questions) {
+  questions.forEach((dropdown, index) => {
+    dropdown.addEventListener('click', () => {
+      if (questions[index].getAttribute('aria-expanded') === 'false') {
+        questions[index].setAttribute('aria-expanded', true);
+        questions[index].style.height = 'var(--full-height)';
+        questions[index].style.borderBottom = '2px solid var(--colors-blue)';
+        questions[index].lastElementChild.style.opacity = '1';
+        questionDropdown[index].style.transform = 'rotate(-90deg)';
+      } else {
+        questions[index].setAttribute('aria-expanded', false);
+        questions[index].style.height = 'var(--header-height)';
+        questions[index].style.borderBottom = '';
+        questions[index].lastElementChild.style.opacity = '0';
+        questionDropdown[index].style.transform = 'rotate(90deg)';
+      }
+    });
+  });
+}

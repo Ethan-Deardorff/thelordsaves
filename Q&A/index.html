@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,323 @@
     <link rel="stylesheet" href="/style/thelordsaves.main.css">
     <title>Coming Soon</title>
 </head>
+
 <body>
 
     <!-- Q & A -->
 
-    <h1 style="display: flex; align-items: center; flex-direction: column; justify-content: center; gap: 16px; height: 100vh; width: 100vw;">Coming Soon!
-        <a class="blue" style="text-decoration: underline;" href="/">To Home</a>
-    </h1>
+    <header class="flex w-100 align fade-in scrolled" id="header">
+        <a href="/" class="flex align side-padding m-gap" id="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" fill="none">
+                <path fill="url(#a)" fill-rule="evenodd"
+                    d="M8.677.5a1.5 1.5 0 0 1 1.5 1.5v24a1.5 1.5 0 1 1-3 0V2a1.5 1.5 0 0 1 1.5-1.5Z"
+                    clip-rule="evenodd" />
+                <path fill="url(#b)" fill-rule="evenodd"
+                    d="M.5 9.67A1.5 1.5 0 0 1 2 8.17h13.173a1.5 1.5 0 1 1 0 3H2a1.5 1.5 0 0 1-1.5-1.5Z"
+                    clip-rule="evenodd" />
+                <defs>
+                    <linearGradient id="a" x1="13.357" x2="12.875" y1="14" y2="4.959" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="var(--colors-blue)" />
+                        <stop offset="1" stop-color="var(--colors-blue)" stop-opacity=".2" />
+                    </linearGradient>
+                    <linearGradient id="b" x1="8.24" x2=".036" y1="13.714" y2="2.884" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="var(--colors-blue)" />
+                        <stop offset="1" stop-color="var(--colors-blue)" stop-opacity=".2" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="bold blue">The Lord Saves</span>
+        </a>
+        <nav class="flex align justify side-padding" id="large-nav">
+            <ul class="flex align l-gap">
+                <li class="nav-item">
+                    <a class="secondary-button" href="/About/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Resources/">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button blue bold" href="/Q&A/">Q&A</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="small-nav align justify">
+            <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="menu">
+                <path fill-rule="evenodd" clip-rule="evenodd" id="bar-1"
+                    d="M0 17.3333C0 16.5969 0.537258 16 1.2 16H22.8C23.4627 16 24 16.5969 24 17.3333C24 18.0697 23.4627 18.6667 22.8 18.6667H1.2C0.537258 18.6667 0 18.0697 0 17.3333Z"
+                    fill="var(--colors-text)" />
+                <path id="menu-bar"
+                    d="M0 9.33333C0 8.59695 0.537258 8 1.2 8H22.8C23.4627 8 24 8.59695 24 9.33333C24 10.0697 23.4627 10.6667 22.8 10.6667H1.2C0.537258 10.6667 0 10.0697 0 9.33333Z"
+                    fill="var(--colors-text)" />
+                <path id="bar-3"
+                    d="M0 1.33333C0 0.596954 0.537258 0 1.2 0H22.8C23.4627 0 24 0.596954 24 1.33333C24 2.06971 23.4627 2.66667 22.8 2.66667H1.2C0.537258 2.66667 0 2.06971 0 1.33333Z"
+                    fill="var(--colors-text)" />
+            </svg>
+        </nav>
+        <nav id="nav-overlay" class="w-100 flex">
+            <ul class="flex column m-gap">
+                <h1>About</h1>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/About/#purpose">Christianity's Purpose</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/About/#acceptance">Acceptance</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/About/#values">Values & Morals</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+            </ul>
+            <ul class="flex column m-gap">
+                <h1>Resources</h1>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Resources/#bibles">Online Bibles</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Resources/#communities">Communities</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Resources/#contact">Contact Us</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+            </ul>
+            <ul class="flex column m-gap">
+                <h1>Questions & Answers</h1>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Q&A/#general">General Questions</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a class="secondary-button" href="/Q&A/#misconceptions">Common Misconceptions</a>
+                    <svg class="arrow" width="7" height="13" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.292893 12.2071c-.3905241-.3905-.3905241-1.0237 0-1.4142L4.58579 6.5.292893 2.20711c-.3905241-.39053-.3905241-1.02369 0-1.414216.390524-.390525 1.023687-.390525 1.414217 0l5 4.999996c.39052.39053.39052 1.02369 0 1.41422l-5 4.99999c-.39053.3905-1.023693.3905-1.414217 0Z" />
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="overlay-bg" class="w-100"></div>
+
+    <main style="padding-top: 56px;" class="fade-in">
+        <section class="section-title flex justify align padding no-an">Q & A</section>
+        <div class="link-point" id="general"></div>
+        <section class="padding l-gap flex column qa-section">
+            <h1>General Questions</h1>
+            <div class="flex column m-gap">
+                <div class="question-container" aria-expanded="false">
+                    <h2>
+                        If God is all loving, then why does he allow people to go to hell?
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        The definition of hell is “the absence of God”. Through this definition we can see why people
+                        are
+                        sent to hell. The ones
+                        who want nothing to do with God and reject him shall spent eternity without him. And a lot of
+                        people
+                        say thats very
+                        selfish of God; but would you want to spend an eternity with people who don't respect or care
+                        about
+                        you? I think the
+                        answer would be no.
+                    </p>
+                </div>
+                <div class="question-container" aria-expanded="false">
+                    <h2>Doesn't science disprove Christianity?
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        Many scientists actually are Christians themselves. But besides that, science is simply the
+                        study of
+                        God's Earth. The
+                        only theories that have been labeled as the truth instead of Christianity are evolutionism and
+                        the
+                        big bang. Both of
+                        these theories are actually started by people who are not opposed to any religion or god.
+                        Charles
+                        Darwin actually stated
+                        that he had doubts of some of his work because of the idea of a god. And the creator of the big
+                        bang
+                        was a practicing
+                        Christian. The idea that these theories disprove Christianity is simply an agenda made by other
+                        people who aren't even
+                        scientists that are trying to belittle the Christian ideas.
+                    </p>
+                </div>
+                <div class="question-container" aria-expanded="false">
+                    <h2>Why do bad things happen to people if God is so good?
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        This question is a big one in the community and is something that is better left to speculation.
+                        For
+                        the most part, bad
+                        things happen because God promises us a greater future than what we are experiencing now. This
+                        earth
+                        is full of evil,
+                        and as humans, sometimes we have to experience that. People ask why does God allow these things,
+                        but
+                        first you have to
+                        explain why he would have no reason not to. There are reasons for God to let bad things to
+                        happen;
+                        one is that God has
+                        promised things will get better and that we should trust him. Another answer is that these hard
+                        times are a learning
+                        experience for us and are used to make us stronger. And the last reason would be because it will
+                        glorify God later on
+                        when we trust in him and gain his strength. At the end of the day, just because bad things
+                        happen to
+                        us on earth, does
+                        not disprove the Christian faith.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="link-point" id="misconceptions"></div>
+        <section class="padding flex column l-gap qa-section">
+            <h1>Common Misconceptions</h1>
+            <div class="flex column m-gap">
+                <div class="question-container" aria-expanded="false">
+                    <h2>"Christians are terrible people. I've seen people who are Christian do horrible things."
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        The actions of individuals do not define a religion. There are plenty of terrible people in all
+                        religions; but anyone
+                        can claim they believe in whatever. The Bible tells us clearly that our actions do reflect our
+                        character. So if you are
+                        claiming to be something, you better act like it. Not to mention that there is a major
+                        difference
+                        between most modern
+                        views on Christianity when compared to the origins. The Bible is a clear instruction manual; and
+                        if
+                        someone is not
+                        following that manual it is on them, not on God.
+                    </p>
+                </div>
+                <div class="question-container" aria-expanded="false">
+                    <h2>"There is no evidence for God."
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        Now no one can definitively prove God exists except himself. But there is historical evidence
+                        that
+                        points to his
+                        existence. The fact that over 500 people saw Jesus risen from the dead is already a hefty claim.
+                        There is just no way
+                        that many people can say the same thing and all be lying at the same time; especially when the
+                        crime
+                        for that was death.
+                        The Bible is also full of evidence like how Noahs Flood actually happened. You can see why that
+                        is
+                        at
+                        <a target="_blank"
+                            href="https://www.smithsonianmag.com/science-nature/evidence-for-a-flood-102813115/"
+                            class="blue bold">
+                            Smithsonianmag.com.
+                        </a>
+                        Many historians actually claim that the Bible is the most important piece of
+                        historical text in the
+                        world. These are just few examples but you can research more individual ones on your own.
+                    </p>
+                </div>
+                <div class="question-container" aria-expanded="false">
+                    <h2>"The Bible is old and changed throughout the years."
+                        <button class="question-dropdown" aria-controls="question-container">
+                            <img src="/assets/graphics/arrow.svg" alt="arrow">
+                        </button>
+                    </h2>
+                    <p>
+                        This is something that many atheists like to use to combat Christianity. The fact is, the Bible
+                        has
+                        not changed almost
+                        at all from its original Hebrew and Greek versions. There is a study that shows this from Grand
+                        <a href="https://www.gcu.edu/blog/theology-ministry/dear-theophilus-old-testament-trustworthy#:~:text=This%20is%20evidence%20of%20how,the%20all%20the%20options%20are."
+                            class="blue bold" target="_blank">
+                            Canyon University.
+                        </a> It
+                        tells the accuracy of the Bible even throughout the many translations. There are many other
+                        studies
+                        that give the same
+                        results you can look at. This accuracy is not just a sign of authenticity, it shows that God's
+                        word
+                        is for everyone and
+                        shall be accessible for all people.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="padding align flex column l-gap qa-section">
+            <svg width="118" height="207" viewBox="0 0 118 207" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="hero-img">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M59.7517 -1.5299e-07C61.6847 -6.84959e-08 63.2517 1.567 63.2517 3.5L63.2517 203.5C63.2517 205.433 61.6847 207 59.7517 207C57.8187 207 56.2517 205.433 56.2517 203.5L56.2517 3.5C56.2517 1.567 57.8187 -2.37484e-07 59.7517 -1.5299e-07Z"
+                    fill="url(#paint0_linear_357_383)" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.612793 67.4095C0.612793 65.4765 2.1798 63.9095 4.11279 63.9095H113.887C115.82 63.9095 117.387 65.4765 117.387 67.4095C117.387 69.3425 115.82 70.9095 113.887 70.9095H4.11279C2.1798 70.9095 0.612793 69.3425 0.612793 67.4095Z"
+                    fill="url(#paint1_linear_357_383)" />
+                <defs>
+                    <linearGradient id="paint0_linear_357_383" x1="64.4322" y1="103.5" x2="36.3907" y2="40.4076"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="var(--colors-blue)" />
+                        <stop offset="1" stop-color="var(--colors-blue)" stop-opacity="0.2" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_357_383" x1="56.1128" y1="71.4547" x2="54.5759" y2="54.549"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="var(--colors-blue)" />
+                        <stop offset="1" stop-color="var(--colors-blue)" stop-opacity="0.2" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div style="display: flex; flex-direction: column; gap: 8px; text-align: center; align-items: center;">
+                <h2>Decide for Yourself</h2>
+                <p>Any inqueries you have about Christianity are encouraged to research about on your own. There are
+                    many
+                    resources to use and many different ideas to consider. If you need help getting started, you can go
+                    to
+                    our resources page.</p>
+                <a class="primary-button blue bold" style="width: max-content;" href="/Resources/">Resources</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script/main.script.js"></script>
 </body>
+
 </html>

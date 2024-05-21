@@ -467,7 +467,7 @@ aside {
   scrollbar-width: none;
 }
 
-.#about-info::-webkit-scrollbar {
+#about-info::-webkit-scrollbar {
   display: none;
 }
 
@@ -539,6 +539,72 @@ aside {
   width: 300px;
 }
 
+/************************** Q&A **************************/
+
+.qa-section {
+  margin-inline: 10%;
+}
+
+.question-container {
+  --full-height: max-content;
+  --header-height: max-content;
+
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--colors-background-alt);
+  border-radius: 16px;
+  height: var(--header-height);
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+
+  &>h2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 32px;
+    font-weight: normal;
+    font-size: 1.25rem;
+    gap: 16px;
+
+    &>button {
+      display: flex;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(90deg);
+      transition: all 300ms ease-in-out;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+
+      &>img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &>p {
+    width: 100%;
+    padding: 0 32px 32px;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+  }
+}
+
 /************************** Animations **************************/
 
 .no-an {
@@ -578,6 +644,9 @@ aside {
 }
 
 @media screen and (max-width: 768px) {
+  .qa-section {
+    margin-inline: 0;
+  }
 
   .l-gap {
     gap: 16px;
