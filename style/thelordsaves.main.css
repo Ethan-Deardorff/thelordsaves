@@ -648,6 +648,19 @@ aside {
     margin-inline: 0;
   }
 
+  .question-container {
+    display: flex;
+
+    &>h2 {
+      padding: 16px;
+      font-size: 1.15rem;
+    }
+
+    &>p {
+      padding: 0 16px 16px;
+    }
+  }
+
   .l-gap {
     gap: 16px;
   }
